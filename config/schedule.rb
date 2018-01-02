@@ -5,3 +5,7 @@
 every :day, :at => '00:00am', :roles => [:app] do
   UserMembershipCheckJob.perform_later
 end
+
+every :day, :at => '12:00am', :roles => [:app] do
+  MembershipNoticeMailsenderJob.perform_later
+end

@@ -19,7 +19,7 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
-      get 'users/show'
+      post 'users/show'
     end
   end
 
@@ -31,7 +31,7 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
-      get 'users/create'
+      post 'users/create'
     end
   end
 
@@ -46,6 +46,7 @@ Rails.application.routes.draw do
       get 'users/edit'
     end
   end
+
 
   devise_for :admins
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

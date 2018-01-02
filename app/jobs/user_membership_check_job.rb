@@ -1,0 +1,11 @@
+class UserMembershipCheckJob < ApplicationJob
+  queue_as :default
+
+  def perform(*args)
+    User.where(
+        'membership_ends_at   < ? ', Time.now
+    ).each do |user|
+      user.status = 'Inactive'
+    end
+  end
+end

@@ -11,15 +11,14 @@ module Api
           admin if Devise.secure_compare(token, admin.auth_token) unless admin.blank?
         end
         respond_with(401, auth_error_message) if admin.blank?
-        binding.pry
-        #sing_in(admin, store: false)
+
+        sign_in(admin, store: false)
       end
 
 
-
-    def auth_error_message
-      'Molimo Vas, prvo se ulogirajte kako bi nastavili.'
-    end
+      def auth_error_message
+        'Molimo Vas, prvo se ulogirajte kako bi nastavili.'
+      end
 
     end
   end

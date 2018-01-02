@@ -18,7 +18,7 @@ module Api
   def show
     binding.pry
     user = User.find_by(user_params)
-    respond_with user, serializer: UserSerializer
+    render json: user
   end
 
   def edit

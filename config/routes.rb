@@ -1,6 +1,36 @@
 Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
+      get 'groups/create'
+    end
+  end
+
+  namespace :api do
+    namespace :v1 do
+      get 'groups/index'
+    end
+  end
+
+  namespace :api do
+    namespace :v1 do
+      get 'groups/show'
+    end
+  end
+
+  namespace :api do
+    namespace :v1 do
+      get 'groups/edit'
+    end
+  end
+
+  namespace :api do
+    namespace :v1 do
+      get 'groups/destroy'
+    end
+  end
+
+  namespace :api do
+    namespace :v1 do
       get 'sessions/create'
     end
   end
@@ -44,6 +74,16 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       get 'users/edit'
+    end
+  end
+
+
+  namespace :api do
+    namespace :v1 do
+      post 'sessions/create'
+      get 'sessions/destroy'
+
+      resources :admins
     end
   end
 

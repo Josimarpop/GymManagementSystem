@@ -1,15 +1,20 @@
 module Api
   module V1
     class UsersController < AuthorizationsController
+      respond_to :json
 
+   def signin
+    # membership i mailer posebni kontroleri ?
+   end
 
   def create
+    # new/save umjesto createa
     user = User.create(user_params)
 
     respond_with user, serializer: UserSerializer, on_error: {
         status: :bad_request, detail: 'Pogreška kod kreiranja korisnika! Username ili email već postoji!'
     }
-    MembershipMailer.create_membership_renewal_email(user)
+    MembershipMailer.membership_renewal_email(user).deliver_now
   end
 
   def index
@@ -17,9 +22,9 @@ module Api
   end
 
   def show
-    binding.pry
+   # binding.pry
     user = User.find_by(user_params)
-    render json: user
+    respond_with :api, :v1,json: user, serializer: UserSerializer
   end
 
   def edit
@@ -30,12 +35,18 @@ module Api
     user = User.find_by(user_params)
     user.update(user_params)
 
-    respond_with user, serializer: UserSerializer
+    respond_with :api, :v1, user, serializer: UserSerializer
+  end
+
+
+  def destroy
+
   end
 
   private
 
   def user_params
+    #dal da ovdje doma ubacim i grupu. NE nego u serializer
     params.require(:user).permit( :id, :first_name, :last_name, :email, :status)
   end
 

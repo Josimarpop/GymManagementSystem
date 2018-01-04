@@ -9,5 +9,10 @@
 #Admin.create!(username: 'adminko', password: 'asdfasdf', email: 'adminko@mail.com')
 #Admin.create!(username: 'zdravko', password: 'asdfasdf', email: 'zdravko@mail.com')
 
-User.create!(first_name: 'Konj', last_name: 'Konjusina', email: 'konjusina@gmail.com', status: 'active')
-User.create!(first_name: 'Zmajo', last_name: 'Zlajo', email: 'konjSusina@gmail.com', status: 'active')
+#User.create!(first_name: 'Konj', last_name: 'Konjusina', email: 'konjusina@gmail.com', status: 'active')
+#User.create!(first_name: 'Zmajo', last_name: 'Zlajo', email: 'konjSusina@gmail.com', status: 'active')
+
+Group.create(name: 'Fitness')
+Group.create(name: 'Boks')
+Group.create(name: 'Kickboks')
+Group.create(name: 'Bodybuilding')

@@ -8,21 +8,19 @@ module Api
    end
 
   def create
-    # new/save umjesto createa
-    user = User.create(user_params)
+    user = User.create!(user_params)
 
-    respond_with user, serializer: UserSerializer, on_error: {
+    respond_with :api, :v1, json: user, serializer: UserSerializer, on_error: {
         status: :bad_request, detail: 'Pogreška kod kreiranja korisnika! Username ili email već postoji!'
     }
     MembershipMailer.membership_renewal_email(user).deliver_now
   end
 
   def index
-    render json: User.all
+    respond_with :api, :v1, json: User.all, serializer: UserSerializer
   end
 
   def show
-   # binding.pry
     user = User.find_by(user_params)
     respond_with :api, :v1,json: user, serializer: UserSerializer
   end
@@ -35,12 +33,11 @@ module Api
     user = User.find_by(user_params)
     user.update(user_params)
 
-    respond_with :api, :v1, user, serializer: UserSerializer
+    respond_with :api, :v1, json: user, serializer: UserSerializer
   end
 
-
   def destroy
-
+    User.find_by(user_params).destroy
   end
 
   private

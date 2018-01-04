@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
-      get 'groups/create'
+      post 'groups/create'
     end
   end
 
@@ -13,19 +13,19 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
-      get 'groups/show'
+      post 'groups/show'
     end
   end
 
   namespace :api do
     namespace :v1 do
-      get 'groups/edit'
+      post 'groups/edit'
     end
   end
 
   namespace :api do
     namespace :v1 do
-      get 'groups/destroy'
+      post 'groups/destroy'
     end
   end
 

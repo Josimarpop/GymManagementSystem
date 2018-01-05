@@ -3,7 +3,6 @@ module Api
     class ApiController < ApplicationController
       respond_to :json
 
-
       protected
 
       def configurate_permitted_parameters

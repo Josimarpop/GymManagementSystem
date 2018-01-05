@@ -33,7 +33,7 @@ module Api
 
     private
       def group_params
-        params.require(:groups).permit(:id, :name)
+        params.require(:group).permit(:id, :name)
       end
 
      end

@@ -1,6 +1,20 @@
 Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
+      post 'user_groups/index'
+    end
+  end
+
+  namespace :api do
+    namespace :v1 do
+      post 'user_groups/show'
+      post 'user_groups/create'
+      post 'user_groups/destroy'
+    end
+  end
+
+  namespace :api do
+    namespace :v1 do
       post 'groups/create'
     end
   end

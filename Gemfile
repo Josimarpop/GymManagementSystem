@@ -56,7 +56,10 @@ group :development, :test do
   gem 'better_errors', '~> 2.4.0'
   gem 'binding_of_caller'
   gem 'pry-rails'
+  gem 'rspec-rails', '~> 3.7'
+  gem 'factory_bot_rails'
 end
+
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.

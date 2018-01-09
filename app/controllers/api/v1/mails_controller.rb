@@ -1,6 +1,6 @@
 module Api
   module V1
-    class MailsController < ApplicationController
+    class MailsController < AuthorizationsController
 
       def create
         send_mails_to_users

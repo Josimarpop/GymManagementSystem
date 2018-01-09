@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
+      post 'mails/create'
+    end
+  end
+
+  namespace :api do
+    namespace :v1 do
       post 'user_groups/index'
     end
   end

@@ -21,7 +21,7 @@ module Api
         end
       end
 
-      def destroy  #dodati error handling
+      def destroy
         @group = Group.find(group_params[:id])
         GroupHasUser.find_by(group_id: group_params[:id], user_id: user_params[:id]).delete
         render json: 'Korisnik je uspješno maknut iz grupe!'

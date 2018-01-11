@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="caa5ed9b-b503-4de6-9cc4-30fbdf565e7b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/api/v1/users_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/api/v1/users_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.rakeTasks" afterPath="$PROJECT_DIR$/.idea/.rakeTasks" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/api/v1/groups_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/api/v1/groups_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,6 +17,7 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/GymManagementSystem@db_seed__GymManagementSystem.coverage" NAME="db:seed: GymManagementSystem Coverage Results" MODIFIED="1515101518047" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GymManagementSystem" />
     <SUITE FILE_PATH="coverage/GymManagementSystem@db_setup__GymManagementSystem.coverage" NAME="db:setup: GymManagementSystem Coverage Results" MODIFIED="1514371703988" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GymManagementSystem" />
+    <SUITE FILE_PATH="coverage/GymManagementSystem@routes__GymManagementSystem.coverage" NAME="routes: GymManagementSystem Coverage Results" MODIFIED="1515675837004" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GymManagementSystem" />
     <SUITE FILE_PATH="coverage/GymManagementSystem@Development__GymManagementSystem.coverage" NAME="Development: GymManagementSystem Coverage Results" MODIFIED="1515673406281" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GymManagementSystem" />
     <SUITE FILE_PATH="coverage/GymManagementSystem@db_migrate__GymManagementSystem.coverage" NAME="db:migrate: GymManagementSystem Coverage Results" MODIFIED="1515152890882" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="GymManagementSystem" />
     <SUITE FILE_PATH="coverage/GymManagementSystem@sessions_controller.coverage" NAME="sessions_controller Coverage Results" MODIFIED="1514919205130" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app/controllers/api/v1" MODULE_NAME="GymManagementSystem" />
@@ -25,11 +28,11 @@
       <file leaf-file-name="routes.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/routes.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1350">
-              <caret line="90" column="25" lean-forward="false" selection-start-line="90" selection-start-column="25" selection-end-line="90" selection-end-column="25" />
+            <state relative-caret-position="360">
+              <caret line="42" column="25" lean-forward="false" selection-start-line="42" selection-start-column="25" selection-end-line="42" selection-end-column="25" />
               <folding>
-                <marker date="1515674744006" expanded="true" signature="50:200" ph="do ... end" />
-                <marker date="1515674744006" expanded="true" signature="50:434" ph="do ... end" />
+                <marker date="1515676970279" expanded="true" signature="50:200" ph="do ... end" />
+                <marker date="1515676970279" expanded="true" signature="50:434" ph="do ... end" />
               </folding>
             </state>
           </provider>
@@ -95,7 +98,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="users_controller.rb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="users_controller.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/api/v1/users_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="253">
@@ -105,11 +108,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="groups_controller.rb" pinned="false" current-in-tab="false">
+      <file leaf-file-name="groups_controller.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/api/v1/groups_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+            <state relative-caret-position="330">
+              <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -173,7 +176,6 @@
         <option value="$PROJECT_DIR$/db/seeds.rb" />
         <option value="$PROJECT_DIR$/app/serializers/user_serializer.rb" />
         <option value="$PROJECT_DIR$/app/controllers/api/v1/api_controller.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/api/v1/groups_controller.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20180105104912_rename_group_has_member_to_group_has_users.rb" />
         <option value="$PROJECT_DIR$/app/models/group_has_user.rb" />
         <option value="$PROJECT_DIR$/app/models/group.rb" />
@@ -190,8 +192,9 @@
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/config/initializers/bugsnag.rb" />
-        <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/controllers/api/v1/users_controller.rb" />
+        <option value="$PROJECT_DIR$/config/routes.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/api/v1/groups_controller.rb" />
       </list>
     </option>
   </component>
@@ -252,6 +255,21 @@
             <path>
               <item name="GymManagementSystem" type="b2602c69:ProjectViewProjectNode" />
               <item name="GymManagementSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GymManagementSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GymManagementSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="v1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GymManagementSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GymManagementSystem" type="462c0819:PsiDirectoryNode" />
               <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -289,7 +307,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Rails.Development: GymManagementSystem">
+  <component name="RunManager" selected="Rake.routes: GymManagementSystem">
     <configuration name="Development: GymManagementSystem" type="RailsRunConfigurationType" factoryName="Rails">
       <predefined_log_file id="RUBY_RAILS_SERVER" enabled="true" />
       <module name="GymManagementSystem" />
@@ -384,7 +402,7 @@
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_DRYRUN" VALUE="false" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_PREREQS" VALUE="false" />
     </configuration>
-    <configuration name="db:setup: GymManagementSystem" type="RakeRunConfigurationType" factoryName="Rake" temporary="true">
+    <configuration name="routes: GymManagementSystem" type="RakeRunConfigurationType" factoryName="Rake" temporary="true">
       <module name="GymManagementSystem" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
@@ -399,7 +417,7 @@
           <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
         </COVERAGE_PATTERN>
       </EXTENSION>
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_NAME" VALUE="db:setup" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_NAME" VALUE="routes" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ARGS" VALUE="" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ATTACHED_TEST_FRAMEWORKS" VALUE="" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TRACE" VALUE="false" />
@@ -493,19 +511,19 @@
       <item index="1" class="java.lang.String" itemvalue="Rake.spec: GymManagementSystem" />
       <item index="2" class="java.lang.String" itemvalue="Rails.Production: GymManagementSystem" />
       <item index="3" class="java.lang.String" itemvalue="Rails.Development: GymManagementSystem" />
-      <item index="4" class="java.lang.String" itemvalue="Rake.db:setup: GymManagementSystem" />
-      <item index="5" class="java.lang.String" itemvalue="Rake.db:migrate: GymManagementSystem" />
-      <item index="6" class="java.lang.String" itemvalue="Rake.db:seed: GymManagementSystem" />
-      <item index="7" class="java.lang.String" itemvalue="Ruby.sessions_controller" />
-      <item index="8" class="java.lang.String" itemvalue="Ruby.users_controller" />
+      <item index="4" class="java.lang.String" itemvalue="Rake.db:migrate: GymManagementSystem" />
+      <item index="5" class="java.lang.String" itemvalue="Rake.db:seed: GymManagementSystem" />
+      <item index="6" class="java.lang.String" itemvalue="Ruby.sessions_controller" />
+      <item index="7" class="java.lang.String" itemvalue="Ruby.users_controller" />
+      <item index="8" class="java.lang.String" itemvalue="Rake.routes: GymManagementSystem" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Rake.db:migrate: GymManagementSystem" />
-        <item index="1" class="java.lang.String" itemvalue="Rake.db:seed: GymManagementSystem" />
-        <item index="2" class="java.lang.String" itemvalue="Ruby.users_controller" />
-        <item index="3" class="java.lang.String" itemvalue="Ruby.sessions_controller" />
-        <item index="4" class="java.lang.String" itemvalue="Rake.db:setup: GymManagementSystem" />
+        <item index="0" class="java.lang.String" itemvalue="Rake.routes: GymManagementSystem" />
+        <item index="1" class="java.lang.String" itemvalue="Rake.db:migrate: GymManagementSystem" />
+        <item index="2" class="java.lang.String" itemvalue="Rake.db:seed: GymManagementSystem" />
+        <item index="3" class="java.lang.String" itemvalue="Ruby.users_controller" />
+        <item index="4" class="java.lang.String" itemvalue="Ruby.sessions_controller" />
       </list>
     </recent_temporary>
   </component>
@@ -531,12 +549,12 @@
       <workItem from="1515147043765" duration="10178000" />
       <workItem from="1515493467087" duration="6520000" />
       <workItem from="1515523857779" duration="6176000" />
-      <workItem from="1515669112483" duration="4366000" />
+      <workItem from="1515669112483" duration="6390000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="97763000" />
+    <option name="totallyTimeSpent" value="99787000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1491" y="128" width="1315" height="772" extended-state="6" />
@@ -933,29 +951,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/api/v1/groups_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/api/v1/users_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+        <state relative-caret-position="253">
+          <caret line="38" column="0" lean-forward="true" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1350">
-          <caret line="90" column="25" lean-forward="false" selection-start-line="90" selection-start-column="25" selection-end-line="90" selection-end-column="25" />
+        <state relative-caret-position="360">
+          <caret line="42" column="25" lean-forward="false" selection-start-line="42" selection-start-column="25" selection-end-line="42" selection-end-column="25" />
           <folding>
-            <marker date="1515674744006" expanded="true" signature="50:200" ph="do ... end" />
-            <marker date="1515674744006" expanded="true" signature="50:434" ph="do ... end" />
+            <marker date="1515676970279" expanded="true" signature="50:200" ph="do ... end" />
+            <marker date="1515676970279" expanded="true" signature="50:434" ph="do ... end" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/api/v1/users_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/api/v1/groups_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="38" column="0" lean-forward="true" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+        <state relative-caret-position="330">
+          <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
           <folding />
         </state>
       </provider>

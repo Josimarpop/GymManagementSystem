@@ -11,7 +11,7 @@ module Api
     end
 
     def index
-      respond_with :api, :v1, json: Group.all, serializer: GroupSerializer
+      respond_with :api, :v1, json: Group.all, each_serializer: GroupSerializer
     end
 
     def show
@@ -20,13 +20,18 @@ module Api
 
     def edit
       group = Group.find(group_params[:id])
+      respond_with :api, :v1, json: group, serializer: GroupSerializer
+    end
+
+    def update
+      group = Group.find(group_params[:id])
       group.update(group_params)
 
       respond_with :api, :v1, json: group, serializer: GroupSerializer
     end
 
     def destroy
-      Group.find_by(group_params).destroy
+      Group.find(group_params[:id]).destroy
       render json: 'Grupa uspješno izbrisana'
     end
 

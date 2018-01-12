@@ -1,6 +1,18 @@
 Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
+        get 'membership_types/index'
+        post 'membership_types/show'
+        post 'membership_types/edit'
+        post 'membership_types/destroy'
+        post 'membership_types/update'
+        post 'membership_types/create'
+      end
+    end
+
+
+  namespace :api do
+    namespace :v1 do
       post 'mails/create'
     end
   end
@@ -52,13 +64,13 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
-      get 'sessions/create'
+      post 'sessions/create'
     end
   end
 
   namespace :api do
     namespace :v1 do
-      get 'sessions/destroy'
+      post 'sessions/destroy'
     end
   end
 

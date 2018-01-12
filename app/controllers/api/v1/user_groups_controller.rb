@@ -2,7 +2,6 @@ module Api
   module V1
     class UserGroupsController < ApplicationController
 
-
       def show
         @group = Group.find(group_params[:id])
         @users = @group.users

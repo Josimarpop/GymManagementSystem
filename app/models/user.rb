@@ -3,4 +3,7 @@ class User < ApplicationRecord
   has_many :member_attendances
   has_many :group_has_users
   has_many :groups, :through => :group_has_users
+
+  has_many :user_has_membership_types
+  has_many :membership_types, :through => :user_has_membership_types
 end

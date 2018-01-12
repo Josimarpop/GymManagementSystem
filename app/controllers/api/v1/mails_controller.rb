@@ -6,7 +6,6 @@ module Api
         send_mails_to_users
       end
 
-
       private
 
       def send_mails_to_users
@@ -16,7 +15,7 @@ module Api
       end
 
       def mail_params
-        params.require(:mail).permit( :subject, :body,user_ids: [])
+        params.require(:mail).permit( :subject, :body, user_ids: [])
       end
     end
   end

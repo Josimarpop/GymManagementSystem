@@ -3,10 +3,7 @@ module Api
     class UsersController < AuthorizationsController
       respond_to :json
 
-      def signin
-        # membership i mailer posebni kontroleri ?
-      end
-
+      
       def create
         user = User.create!(user_params)
 

@@ -3,7 +3,7 @@ module Api
     class UsersController < AuthorizationsController
       respond_to :json
 
-      
+
       def create
         user = User.create!(user_params)
 

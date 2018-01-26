@@ -1,6 +1,24 @@
 Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
+      get 'member_attendances/create'
+    end
+  end
+
+  namespace :api do
+    namespace :v1 do
+      get 'member_attendances/index'
+    end
+  end
+
+  namespace :api do
+    namespace :v1 do
+      get 'member_attendances/destroy'
+    end
+  end
+
+  namespace :api do
+    namespace :v1 do
       get 'notes/create'
     end
   end

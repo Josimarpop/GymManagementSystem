@@ -1,6 +1,25 @@
 Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
+      get 'notes/create'
+    end
+  end
+
+  namespace :api do
+    namespace :v1 do
+      get 'notes/index'
+    end
+  end
+
+  namespace :api do
+    namespace :v1 do
+      get 'notes/destroy'
+    end
+  end
+
+  apipie
+  namespace :api do
+    namespace :v1 do
         get 'membership_types/index'
         post 'membership_types/show'
         post 'membership_types/edit'

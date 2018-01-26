@@ -32,7 +32,7 @@ module Api
 
     def destroy
       Group.find(group_params[:id]).destroy
-      render json: 'Grupa uspješno izbrisana'
+      render json: 'Grupa je uspješno izbrisana.'
     end
 
 

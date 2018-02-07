@@ -13,13 +13,13 @@ module Api
           admin.regenerate_auth_token!
           respond_with :api, :v1, json: admin, serializer: AdminSerializer
         else
-          render json: 'Ups! Upisali ste krivu lozinku ili email!', status: :bad_request
+          render json: {notice: {detail: 'Ups! Upisali ste krivu lozinku ili email!'}, status: :bad_request}
         end
       end
 
       def destroy
         current_admin.regenerate_auth_token!
-        render json: 'Korisnik je uspješno odjavljen!'
+        render json: {notice: {detail: 'Korisnik je uspješno odjavljen!'}}
       end
 
       private

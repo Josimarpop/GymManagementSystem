@@ -34,7 +34,7 @@ module Api
 
       def destroy
         MembershipType.find(membership_type_params[:id]).destroy
-        render json: 'Članarina uspješno izbrisana!'
+        render json: {notice: {detail: 'Članarina uspješno izbrisana!'}}
       end
 
       private

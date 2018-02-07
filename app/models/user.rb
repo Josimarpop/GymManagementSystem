@@ -6,4 +6,5 @@ class User < ApplicationRecord
 
   has_many :user_has_membership_types
   has_many :membership_types, :through => :user_has_membership_types
+
 end

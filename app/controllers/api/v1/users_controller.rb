@@ -36,7 +36,7 @@ module Api
 
       def destroy
         User.find(user_params[:id]).destroy
-        render json: 'Korisnik je uspješno izbrisan'
+        render json: {notice: {detail: 'Član je uspješno izbrisan!'}}
       end
 
       private

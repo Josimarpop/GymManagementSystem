@@ -19,6 +19,9 @@ module GymManagementSystem
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
 
+    config.time_zone = 'Zagreb'
+    config.active_record.default_timezone = :local
+
     #CORS
     config.middleware.insert_before 0, Rack::Cors do
       allow do

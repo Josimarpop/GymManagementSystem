@@ -16,10 +16,11 @@ module Api
 
       def destroy
         User.find(note_params[:id]).destroy
-        render json: 'Zabilješka je uspješno izbrisana.'
+        render json: {notice: {detail: 'Zabilješka je uspješno izbrisana.'}}
       end
 
       private
+
       def note_params
         params.require(:note).permit(:id, :body, :author)
       end

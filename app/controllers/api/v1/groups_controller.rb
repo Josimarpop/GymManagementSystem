@@ -15,7 +15,7 @@ module Api
     end
 
     def show
-      respond_with :api, :v1, json: Group.find_by(group_params), serializer: GroupSerializer
+      respond_with :api, :v1, json: Group.find(group_params[:id]), serializer: GroupSerializer
     end
 
     def edit

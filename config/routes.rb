@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
-      get 'member_attendances/create'
+      post 'member_attendances/create'
     end
   end
 
@@ -13,7 +13,7 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
-      get 'member_attendances/destroy'
+      post 'member_attendances/destroy'
     end
   end
 

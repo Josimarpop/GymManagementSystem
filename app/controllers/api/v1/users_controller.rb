@@ -5,6 +5,7 @@ module Api
 
 
       def create
+        recycle_card_if_exists
         user = User.create!(user_params)
 
         respond_with :api, :v1, json: user, serializer: UserSerializer, on_error: {
@@ -41,9 +42,19 @@ module Api
 
       private
 
+      def recycle_card_if_exists
+        user = User.exists?(user_params[:code])
+        remove_user_card_from_db(user) unless user.blank?
+      end
+
+      def remove_user_card_from_db(user)
+        user.code = nil
+        user.save!
+      end
+
       def user_params
         params.require(:user).permit(
-            :id, :first_name, :last_name, :email, :status, :sex, membership_type_ids: [], group_ids: []
+            :id, :first_name, :last_name, :email, :status, :sex, :code, membership_type_ids: [], group_ids: []
         )
       end
 

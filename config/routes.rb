@@ -19,7 +19,7 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
-      get 'notes/create'
+      post 'notes/create'
     end
   end
 
@@ -31,7 +31,7 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
-      get 'notes/destroy'
+      post 'notes/destroy'
     end
   end
 

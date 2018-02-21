@@ -5,13 +5,13 @@ module Api
       def create
         note = Note.create!(note_params)
 
-        respond_with :api, :v1, json: note, on_error: {
+        respond_with :api, :v1, json: note, serializer: NoteSerializer,  on_error: {
             status: :bad_request, detail: 'Pogreška pri kreiranju zabilješke!'
         }
       end
 
       def index
-        respond_with :api, :v1, json: Note.all
+        respond_with :api, :v1, json: Note.all, each_serializer: NoteSerializer
       end
 
       def destroy

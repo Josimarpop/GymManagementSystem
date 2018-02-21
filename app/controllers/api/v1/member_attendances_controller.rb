@@ -3,12 +3,12 @@ module Api
     class MemberAttendancesController < ApplicationController
 
       def create
-        user = User.find(member_attendance_params[:code])
+        user = User.find_by(code: member_attendance_params[:code])
         render json: NewAttendanceService.new(user, member_attendance_params[:membership_id]).perform
       end
 
       def index
-        respond_with :api, :v1, json:  MemberAttendance.all, serializer: UserSerializer
+        respond_with :api, :v1, json:  MemberAttendance.all, each_serializer: MemberAttendanceSerializer
       end
 
       def destroy

@@ -54,6 +54,7 @@ module Api
       def user_params
         params.require(:user).permit(
             :id, :first_name, :last_name, :email, :status, :sex, :address, :birth_date,
+            :membership_start_at, :membership_ends_at, :membership_pause_at,
             :OIB, :phone_number, :code, membership_type_ids: [], group_ids: []
         )
       end

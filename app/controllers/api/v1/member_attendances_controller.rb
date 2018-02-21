@@ -16,14 +16,14 @@ module Api
         MemberAttendance.find(member_attendance_params[:id]).destroy
         render json: {notice: {detail: 'Član je uspješno izbrisan!'}}
       end
-    end
 
-    private
+      private
 
     def member_attendance_params
       params.require(:member_attendance).permit(:id, :code, :membership_id)
     end
 
-  end
-end
 
+end
+  end
+  end

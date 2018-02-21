@@ -3,6 +3,7 @@ class NewAttendanceService
   def initialize(user, membership_id)
     @user = user
     @membership_id = membership_id
+    binding.pry
   end
 
   def perform
@@ -33,7 +34,8 @@ class NewAttendanceService
 
   def user_check_in
     if user_hour_restriction_valid? and user_max_attendances_valid?
-      user.membership_types(membership_id).max_week_attendance_restriction -= 1;
+      binding.pry
+      user.membership_types.find(membership_id).max_week_attendance_restriction -= 1;
     end
   end
 
@@ -44,11 +46,11 @@ class NewAttendanceService
   end
 
   def user_hour_restriction_valid?
-    user.membership_types(membership_id).after_hour_restriction < Time.now ? true : false
+    user.membership_types.find(membership_id).after_hour_restriction < Time.now ? true : false
   end
 
   def user_max_attendances_valid?
-    user.membership_types(membership_id).max_week_attendance_restriction > 0 ? true : false
+    user.membership_types.find(membership_id).max_week_attendance_restriction > 0 ? true : false
   end
 
 

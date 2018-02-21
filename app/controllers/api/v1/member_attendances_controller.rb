@@ -8,8 +8,7 @@ module Api
       end
 
       def index
-        user = User.find(member_attendance_params[:code])
-        respond_with :api, :v1, json: user, serializer: UserSerializer
+        respond_with :api, :v1, json:  MemberAttendance.all, serializer: UserSerializer
       end
 
       def destroy
@@ -19,11 +18,10 @@ module Api
 
       private
 
-    def member_attendance_params
-      params.require(:member_attendance).permit(:id, :code, :membership_id)
+      def member_attendance_params
+        params.require(:member_attendance).permit(:id, :code, :membership_id)
+      end
+
     end
-
-
+  end
 end
-  end
-  end

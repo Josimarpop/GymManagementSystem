@@ -41,7 +41,9 @@ module Api
 
       # Never trust parameters from the scary internet, only allow the white list through.
       def membership_type_params
-        params.require(:membership_type).permit(:id, :name, :max_week_attendance_restriction, :after_hour_restriction)
+        params.require(:membership_type).permit(
+            :id, :name, :max_week_attendance_restriction, :after_hour_restriction
+        )
       end
     end
   end

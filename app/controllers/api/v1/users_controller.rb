@@ -19,7 +19,7 @@ module Api
       end
 
       def show
-        user = User.find_by(user_params)
+        user = User.find(user_params[:id])
         respond_with :api, :v1, json: user, serializer: UserSerializer
       end
 

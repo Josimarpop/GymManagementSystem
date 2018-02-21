@@ -13,17 +13,17 @@ module Api
         @user = User.find(user_params[:id])
 
         if @group.users.include? @user
-          render json: 'Korisnik već postoji u grupi!'
+          render json: {notice: {detail: 'Korisnik već postoji u grupi!'}, status: :bad_request}
         else
           @group.users << @user
-          render json: 'Korisnik je uspješno dadan u grupu!'
+          render json: {notice: {detail: 'Korisnik je uspješno dadan u grupu!'}, status: :OK}
         end
       end
 
       def destroy
         @group = Group.find(group_params[:id])
         GroupHasUser.find_by(group_id: group_params[:id], user_id: user_params[:id]).delete
-        render json: {notice: {detail: 'Korisnik je uspješno maknut iz grupe!'}}
+        render json: {notice: {detail: 'Korisnik je uspješno maknut iz grupe!'}, status: :OK}
       end
 
       private

@@ -5,6 +5,9 @@ module Api
       def create
         user = User.find_by!(code: member_attendance_params[:code])
         render json: NewAttendanceService.new(user, MembershipType.find(member_attendance_params[:membership_id])).perform
+
+      rescue Exception => e
+        binding.pry
       end
 
       def index

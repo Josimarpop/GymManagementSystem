@@ -7,7 +7,7 @@ module Api
         render json: NewAttendanceService.new(user, MembershipType.find(member_attendance_params[:membership_id])).perform
 
       rescue Exception => e
-        binding.pry
+        render json: {notice: {detail: "Korisnik ne postoji!"}}
       end
 
       def index

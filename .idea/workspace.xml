@@ -2,12 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="caa5ed9b-b503-4de6-9cc4-30fbdf565e7b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/api/v1/member_attendances_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/api/v1/member_attendances_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/api/v1/notes_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/api/v1/notes_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/jobs/user_membership_check_job.rb" afterPath="$PROJECT_DIR$/app/jobs/user_membership_check_job.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/mailers/membership_mailer.rb" afterPath="$PROJECT_DIR$/app/mailers/membership_mailer.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/serializers/member_attendance_serializer.rb" afterPath="$PROJECT_DIR$/app/serializers/member_attendance_serializer.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/services/new_attendance_service.rb" afterPath="$PROJECT_DIR$/app/services/new_attendance_service.rb" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -111,8 +105,8 @@
       <file leaf-file-name="new_attendance_service.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/services/new_attendance_service.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+            <state relative-caret-position="439">
+              <caret line="34" column="67" lean-forward="false" selection-start-line="34" selection-start-column="67" selection-end-line="34" selection-end-column="67" />
               <folding />
             </state>
           </provider>
@@ -584,12 +578,12 @@
       <workItem from="1518169865577" duration="609000" />
       <workItem from="1518200241231" duration="102000" />
       <workItem from="1519208108347" duration="19244000" />
-      <workItem from="1519291991061" duration="11646000" />
+      <workItem from="1519291991061" duration="12260000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="203569000" />
+    <option name="totallyTimeSpent" value="204183000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1491" y="128" width="1315" height="772" extended-state="6" />
@@ -1019,8 +1013,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/services/new_attendance_service.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        <state relative-caret-position="439">
+          <caret line="34" column="67" lean-forward="false" selection-start-line="34" selection-start-column="67" selection-end-line="34" selection-end-column="67" />
           <folding />
         </state>
       </provider>

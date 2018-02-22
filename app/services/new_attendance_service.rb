@@ -33,7 +33,6 @@ class NewAttendanceService
 
   def user_check_in
     if user_hour_restriction_valid? and user_max_attendances_valid?
-      binding.pry
       user.membership_types.find(membership_id).max_week_attendance_restriction -= 1
     end
   end

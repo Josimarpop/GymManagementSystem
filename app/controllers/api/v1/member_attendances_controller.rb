@@ -3,8 +3,8 @@ module Api
     class MemberAttendancesController < ApplicationController
 
       def create
-        user = User.find_by(code: member_attendance_params[:code])
-        render json: NewAttendanceService.new(user, member_attendance_params[:membership_id]).perform
+        user = User.find_by!(code: member_attendance_params[:code])
+        render json: NewAttendanceService.new(user, MembershipType.find(member_attendance_params[:membership_id])).perform
       end
 
       def index
@@ -19,7 +19,7 @@ module Api
       private
 
       def member_attendance_params
-        params.require(:member_attendance).permit(:id, :code, :membership_id)
+          params.require(:member_attendance).permit(:id, :code, :membership_id)
       end
 
     end

@@ -15,7 +15,7 @@ module Api
       end
 
       def destroy
-        User.find(note_params[:id]).destroy
+        Note.find(note_params[:id]).destroy
         render json: {notice: {detail: 'Zabilješka je uspješno izbrisana.'}}
       end
 

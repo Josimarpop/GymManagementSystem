@@ -5,7 +5,7 @@ class UserMembershipCheckJob < ApplicationJob
     User.where(
         'membership_ends_at   < ? ', Time.now
     ).each do |user|
-      user.status = 'Inactive'
+      user.status = 'inactive'
       MembershipMailer.membership_expired_email(user).deliver_now
     end
   end

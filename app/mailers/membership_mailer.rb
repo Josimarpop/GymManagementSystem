@@ -14,6 +14,6 @@ class MembershipMailer < ApplicationMailer
 
   def membership_expired_in_3days_email(user)
     @user = user
-    mail(to: @user.mail, subject: 'Istiće vam clanarina za 3 dana!')
+    mail(to: @user.mail, subject: 'Istiće vam članarina za 3 dana!')
   end
 end

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>Sportski centar Arena</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body style="margin-top: 3.2em; padding: 0;">
+
+<div class= "container" style="margin-top:12em; margin-left: 15em; margin-right: 15em">
+
+  <table style="border: 1px solid #cccccc;" cellpadding="0" cellspacing="0" width="100%" >
+    <tr><td style="font-size: 0; line-height: 0;" height="0">&nbsp;</td></tr>
+
+    <td align="center" bgcolor="#70bbd9" style="padding: 0;">
+      <img src="/assets/images/logo_mail.png" alt="Creating Email Magic" width="100%" height="100%" style="display: block;" />
+    </td>
+
+    <tr>
+      <td style="padding: 1.2em 1em 0.3em 1em; color: #153643; font-family: Arial, sans-serif; font-size: 26px; line-height: 20px;">
+        <b>Čestitamo! Obnovili ste članarinu</b>
+      </td>
+    </tr>
+    <tr>
+      <td style="padding: 20px 0 30px 0;">
+
+        <br style="padding-left: 1.5em; padding-right: 1.5em">
+          Pozdrav <%= @user.first_name @user.last_name %>,</br> obnovili ste članarinu do <%= @user.membership_ends_at %>.
+          Puno treninga i uspjeha, želi Vam Sportski centar Arena!
+          </br></br>
+
+          <hr></br>
+          email: scarena2016@gmail.com</a></br>
+          tel.: 01/ 779 2774</br>
+          Ulica Vice Vukova 8, Zagreb, Hrvatska
+          <a href="http://sportskicentararena.com/" style="float: right">Web stranica</a>
+
+      </td>
+    </tr>
+    <tr>
+      <td bgcolor="#ff3c00" style="padding: 30px 30px 30px 30px;">
+        Hvala na povjerenju!
+        <div style="float: right;">Sportski centar Arena</div>
+      </td>
+    </tr>
+  </table>
+
+</div>
+</body>
+</html>
+

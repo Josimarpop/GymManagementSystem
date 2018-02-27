@@ -18,7 +18,7 @@ class NewAttendanceService
   def validate_member_and_add_attendance
     membership_notice = check_if_membership_valid
 
-    (user.member_attendances.create and return UserSerializer.new(user).to_json) if membership_notice.blank?
+    (user.member_attendances.create(membership_type_id: @membership_type.id) and return UserSerializer.new(user).to_json) if membership_notice.blank?
 
     JSON.parse(UserSerializer.new(user).to_json).merge(membership_notice)
   end
@@ -28,13 +28,7 @@ class NewAttendanceService
     return notice_about_expired_membership if user.status.include? 'inactive'
 
     return notice_about_hour_restriction unless user_hour_restriction_valid?
-    return notice_about_expired_attendences unless user_max_attendances_valid?
-  end
-
-  def user_check_in
-    if user_hour_restriction_valid? and user_max_attendances_valid?
-      user.membership_types.find(membership_id).max_week_attendance_restriction -= 1
-    end
+    notice_about_expired_attendances unless user_max_attendances_valid?
   end
 
   def extend_membership
@@ -52,7 +46,7 @@ class NewAttendanceService
   end
 
   def get_user_attendance_count_this_month
-    user.member_attendances.count {|a| a.created_at.month == DateTime.now.month}
+    user.member_attendances.where(:membership_type => @membership_type.id).count {|a| a.created_at.month == DateTime.now.month}
   end
 
 
@@ -64,7 +58,7 @@ class NewAttendanceService
     {notice: {detail: 'Satna restrikcija nije zadovoljena'}}
   end
 
-  def notice_about_expired_attendences
+  def notice_about_expired_attendances
     {notice: {detail: 'Član nema više dolazaka!'}}
   end
 end

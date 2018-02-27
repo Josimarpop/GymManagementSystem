@@ -46,7 +46,7 @@ class NewAttendanceService
   end
 
   def get_user_attendance_count_this_month
-    user.member_attendances.where(:membership_type => @membership_type.id).count {|a| a.created_at.month == DateTime.now.month}
+    user.member_attendances.where('membership_type_id = @membership_type.id').count {|a| a.created_at.month == DateTime.now.month}
   end
 
 

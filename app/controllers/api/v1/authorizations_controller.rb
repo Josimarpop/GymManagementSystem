@@ -10,11 +10,12 @@ module Api
           admin = Admin.find_by(username: options['identifier'])
           admin if Devise.secure_compare(token, admin.auth_token) unless admin.blank?
         end
-        respond_with(401, auth_error_message) if admin.blank?
+        (respond_with(401, auth_error_message) and return) if admin.blank?
 
         sign_in(admin, store: false)
       end
 
+      private
 
       def auth_error_message
         'Molimo Vas, prvo se ulogirajte kako bi nastavili.'

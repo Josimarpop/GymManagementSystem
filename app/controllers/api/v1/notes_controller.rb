@@ -1,6 +1,6 @@
 module Api
   module V1
-    class NotesController < ApplicationController
+    class NotesController < AuthorizationsController
 
       def create
         note = Note.create!(note_params)

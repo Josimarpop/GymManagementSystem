@@ -1,6 +1,6 @@
 module Api
   module V1
-    class MemberAttendancesController < ApplicationController
+    class MemberAttendancesController < AuthorizationsController
 
       def create
         user = User.find_by!(code: member_attendance_params[:code])

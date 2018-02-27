@@ -1,6 +1,6 @@
 module Api
   module V1
-    class UserGroupsController < ApplicationController
+    class UserGroupsController < AuthorizationsController
 
       def show
         @group = Group.find(group_params[:id])

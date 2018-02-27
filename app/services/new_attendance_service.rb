@@ -42,7 +42,7 @@ class NewAttendanceService
   end
 
   def user_max_attendances_valid?
-    get_user_attendance_count_this_month <= membership_type.max_week_attendance_restriction ? true : false
+    get_user_attendance_count_this_month < membership_type.max_week_attendance_restriction ? true : false
   end
 
   def get_user_attendance_count_this_month

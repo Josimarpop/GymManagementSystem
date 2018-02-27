@@ -10,7 +10,7 @@ module Api
           admin = Admin.find_by(username: options['identifier'])
           admin if Devise.secure_compare(token, admin.auth_token) unless admin.blank?
         end
-        (respond_with(401, auth_error_message) and return) if admin.blank?
+        (render json: {notice: {detail: auth_error_message}, status: 401} and return) if admin.blank?
 
         sign_in(admin, store: false)
       end

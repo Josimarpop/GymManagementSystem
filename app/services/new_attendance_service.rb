@@ -37,7 +37,8 @@ class NewAttendanceService
   end
 
   def user_hour_restriction_valid?
-    membership_type.after_hour_restriction > Time.now ? false : true
+    binding.pry
+    membership_type.after_hour_restriction.to_formatted_s(:time) > Time.now.to_formatted_s(:time) ? true : false
   end
 
   def user_max_attendances_valid?

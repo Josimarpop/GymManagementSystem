@@ -46,9 +46,8 @@ class NewAttendanceService
   end
 
   def get_user_attendance_count_this_month
-    user.member_attendances.where('membership_type_id = :id',{id: @membership_type.id}).count {|a| a.created_at.month == DateTime.now.month}
+    user.member_attendaces.where(membership_id: membership_type.id).count{|m| m.created_at.between?(user.membership_starts_at, user.membership_ends_at)}
   end
-
 
   def notice_about_expired_membership
     {notice: {detail: 'Članu je istekla članarina!'}}

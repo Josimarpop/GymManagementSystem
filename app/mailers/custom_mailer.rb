@@ -5,7 +5,7 @@ class CustomMailer < ApplicationMailer
     @user    = user
     @subject = mail_params[:subject]
     @body    = mail_params[:body]
-    mail(to: @user.email, subject: @subject, body: @body, template_name: 'mailer/custom_mail', template_path: 'custom_mail')
+    mail(to: @user.email, subject: @subject, template_path:'mailer', template_name: 'custom_mail')
   end
 
 end

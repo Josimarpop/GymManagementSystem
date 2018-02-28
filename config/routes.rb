@@ -139,6 +139,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       post 'users/update'
       post 'users/destroy'
+      post 'users/extend_membership'
     end
   end
 

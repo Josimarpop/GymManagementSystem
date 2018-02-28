@@ -7,7 +7,7 @@ module Api
         render json: NewAttendanceService.new(user, MembershipType.find(member_attendance_params[:membership_id])).perform
 
       rescue Exception => e
-        render json: {notice: {detail: "Korisnik ne postoji!"}}
+        render json: {notice: {detail: "Greška pri provjeri!"}}
       end
 
       def index
@@ -18,6 +18,7 @@ module Api
         MemberAttendance.find(member_attendance_params[:id]).destroy
         render json: {notice: {detail: 'Član je uspješno izbrisan!'}}
       end
+
 
       private
 

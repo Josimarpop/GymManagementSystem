@@ -11,7 +11,7 @@ module Api
         respond_with :api, :v1, json: user, serializer: UserSerializer, on_error: {
             status: :bad_request, detail: 'Pogreška kod kreiranja korisnika! Username ili email već postoji!'
         }
-        #MembershipMailer.membership_renewal_email(user).deliver_now
+        MembershipMailer.membership_renewal_email(user).deliver_now
       end
 
       def index
@@ -32,8 +32,14 @@ module Api
         user = User.find(user_params[:id])
         recycle_card_if_exists
         user.update(user_params)
-
         respond_with :api, :v1, json: user, serializer: UserSerializer
+      end
+
+      def extend_membership
+        user = User.find(user_params[:id])
+        recycle_card_if_exists
+        user.update(user_params)
+        MembershipMailer.membership_renewal_email(user).deliver_now
       end
 
       def destroy

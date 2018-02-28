@@ -18,7 +18,7 @@ class NewAttendanceService
   def validate_member_and_add_attendance
     membership_notice = check_if_membership_valid
 
-    (user.member_attendances.create(membership_type_id: @membership_type.id) and return UserSerializer.new(user).to_json) if membership_notice.blank?
+    (user.member_attendances.create(membership_type_id: membership_type.id) and return UserSerializer.new(user).to_json) if membership_notice.blank?
 
     JSON.parse(UserSerializer.new(user).to_json).merge(membership_notice)
   end

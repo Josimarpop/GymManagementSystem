@@ -37,7 +37,7 @@ class NewAttendanceService
   end
 
   def user_hour_restriction_valid?
-    membership_type.after_hour_restriction < Time.now ? true : false
+    membership_type.after_hour_restriction > Time.now ? true : false
   end
 
   def user_max_attendances_valid?

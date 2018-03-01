@@ -45,7 +45,7 @@ class NewAttendanceService
   end
 
   def get_user_attendance_count_this_month
-    user.member_attendances.where(id: membership_type.id).count{|m| m.created_at.between?(user.membership_starts_at, user.membership_ends_at)}
+    user.member_attendances.where(membership_type_id: membership_type.id).count{|m| m.created_at.between?(user.membership_starts_at, user.membership_ends_at)}
   end
 
   def notice_about_expired_membership

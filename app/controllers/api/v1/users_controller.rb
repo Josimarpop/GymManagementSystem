@@ -29,7 +29,7 @@ module Api
 
       def update
         user = User.find(user_params[:id])
-        recycle_card_if_exists if user.code != user_params[:code] 
+        recycle_card_if_exists if user.code != user_params[:code]
         user.update(user_params)
         respond_with :api, :v1, json: user, serializer: UserSerializer
       end

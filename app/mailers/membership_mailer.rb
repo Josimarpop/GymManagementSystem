@@ -1,5 +1,5 @@
 class MembershipMailer < ApplicationMailer
-  default from: 'Sportski centar Arena NO REPLY no-reply@sportskicentararena.com'
+  default from: 'Sportski centar Arena NO REPLY <no_reply@sportskicentararena.com>'
   default template_path: 'mailer'
 
   def membership_renewal_email(user)

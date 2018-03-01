@@ -3,7 +3,7 @@
 # run this task only on servers with the :app role in Capistrano
 # see Capistrano roles section below
 every :day, :at => '00:00am', :roles => [:app] do
-  UserMembershipCheckJob.delay({run_at: Time.now+10.hour})
+  UserMembershipCheckJob.perform_later
 end
 
 every :day, :at => '10:00am', :roles => [:app] do

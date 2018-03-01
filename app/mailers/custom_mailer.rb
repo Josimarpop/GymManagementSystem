@@ -1,5 +1,5 @@
 class CustomMailer < ApplicationMailer
-  default from: 'Sportski centar Arena NO REPLY no-reply@sportskicentararena.com'
+  default from: 'Sportski centar Arena NO REPLY <no_reply@sportskicentararena.com>'
 
   def custom_mail(user, mail_params)
     @user    = user

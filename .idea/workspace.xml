@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="caa5ed9b-b503-4de6-9cc4-30fbdf565e7b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/mailers/custom_mailer.rb" afterPath="$PROJECT_DIR$/app/mailers/custom_mailer.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/mailers/membership_mailer.rb" afterPath="$PROJECT_DIR$/app/mailers/membership_mailer.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/mailer/custom_mail.erb" afterPath="$PROJECT_DIR$/app/views/mailer/custom_mail.erb" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -56,11 +53,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="custom_mailer.rb" pinned="false" current-in-tab="false">
+      <file leaf-file-name="custom_mailer.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/mailers/custom_mailer.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="96" lean-forward="false" selection-start-line="7" selection-start-column="85" selection-end-line="7" selection-end-column="96" />
+            <state relative-caret-position="165">
+              <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -86,10 +83,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="membership_expired.erb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="membership_expired.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/mailer/membership_expired.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
+            <state relative-caret-position="465">
               <caret line="31" column="17" lean-forward="true" selection-start-line="31" selection-start-column="17" selection-end-line="31" selection-end-column="17" />
               <folding />
             </state>
@@ -204,9 +201,9 @@
         <option value="$PROJECT_DIR$/app/controllers/api/v1/users_controller.rb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/services/new_attendance_service.rb" />
-        <option value="$PROJECT_DIR$/app/mailers/custom_mailer.rb" />
         <option value="$PROJECT_DIR$/app/mailers/membership_mailer.rb" />
         <option value="$PROJECT_DIR$/app/views/mailer/custom_mail.erb" />
+        <option value="$PROJECT_DIR$/app/mailers/custom_mailer.rb" />
       </list>
     </option>
   </component>
@@ -585,12 +582,12 @@
       <workItem from="1519739581874" duration="7385000" />
       <workItem from="1519808336201" duration="13596000" />
       <workItem from="1519840431050" duration="4665000" />
-      <workItem from="1519891867664" duration="1916000" />
+      <workItem from="1519891867664" duration="3415000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="247130000" />
+    <option name="totallyTimeSpent" value="248629000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -988,14 +985,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/mailers/custom_mailer.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="96" lean-forward="false" selection-start-line="7" selection-start-column="85" selection-end-line="7" selection-end-column="96" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/mailers/membership_mailer.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -1014,8 +1003,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/mailer/membership_expired.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
+        <state relative-caret-position="465">
           <caret line="31" column="17" lean-forward="true" selection-start-line="31" selection-start-column="17" selection-end-line="31" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/mailers/custom_mailer.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding />
         </state>
       </provider>

@@ -4,16 +4,16 @@ class MembershipMailer < ApplicationMailer
 
   def membership_renewal_email(user)
     @user = user
-    mail(to: @user.mail, subject: 'Produžili ste članarinu!', template_name: 'membership_renewal')
+    mail(to: @user.email, subject: 'Produžili ste članarinu!', template_name: 'membership_renewal')
   end
 
   def membership_expired_email(user)
     @user = user
-    mail(to: @user.mail, subject: 'Isteknuta članarina!', template_name: 'membership_expired')
+    mail(to: @user.email, subject: 'Isteknuta članarina!', template_name: 'membership_expired')
   end
 
   def membership_expired_in_3days_email(user)
     @user = user
-    mail(to: @user.mail, subject: '3 dana do isteka članarine!', template_name: 'membership_expired_in_3days')
+    mail(to: @user.email, subject: '3 dana do isteka članarine!', template_name: 'membership_expired_in_3days')
   end
 end

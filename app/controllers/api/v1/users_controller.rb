@@ -11,7 +11,6 @@ module Api
         respond_with :api, :v1, json: user, serializer: UserSerializer, on_error: {
             status: :bad_request, detail: 'Pogreška kod kreiranja korisnika! Username ili email već postoji!'
         }
-        MembershipMailer.membership_renewal_email(user).deliver_now
       end
 
       def index

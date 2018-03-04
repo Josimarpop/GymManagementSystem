@@ -3,6 +3,6 @@ class MemberAttendanceSerializer < ActiveModel::Serializer
   attribute :user
 
   def user
-    UserMemberAttendancesSerializer.new(object.user)
+    UserMemberAttendancesSerializer.new(object.user) unless object.user.blank?
   end
 end

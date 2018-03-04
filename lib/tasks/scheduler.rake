@@ -1,5 +1,3 @@
-require 'resque/tasks'
-
 desc "This task is called by the Heroku scheduler add-on"
 
 task :update_user_memberships => :environment do

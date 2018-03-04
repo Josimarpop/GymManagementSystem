@@ -23,7 +23,7 @@ class NewAttendanceService
   end
 
   def check_if_membership_valid
-    extend_membership if user.status.include? 'paused'
+    extend_membership if user.status.include? 'pause'
     return notice_about_expired_membership if user.status.include? 'inactive'
 
     return notice_about_hour_restriction unless user_hour_restriction_valid?

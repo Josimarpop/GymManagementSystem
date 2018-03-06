@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       post 'member_attendances/create'
+      post 'admins/create'
     end
   end
 
@@ -158,7 +159,6 @@ Rails.application.routes.draw do
       resources :admins
     end
   end
-
 
   devise_for :admins
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

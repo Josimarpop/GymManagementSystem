@@ -19,7 +19,7 @@ module Api
 
       def show
         user = User.find(user_params[:id])
-        respond_with :api, :v1, json: user, serializer: UserSerializer
+        respond_with :api, :v1, json: user, serializer: UserWithAttendancesSerializer
       end
 
       def edit

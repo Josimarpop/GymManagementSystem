@@ -1,6 +1,13 @@
 Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
+      post 'bonus_attendances/create'
+    end
+  end
+
+
+  namespace :api do
+    namespace :v1 do
       post 'member_attendances/create'
       post 'admins/create'
     end

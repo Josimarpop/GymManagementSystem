@@ -3,7 +3,6 @@ module Api
     class UsersController < AuthorizationsController
       respond_to :json
 
-
       def create
         recycle_card_if_exists
         user = User.create!(user_params)
@@ -61,7 +60,7 @@ module Api
         params.require(:user).permit(
             :id, :first_name, :last_name, :email, :status, :sex, :address, :birth_date,
             :membership_starts_at, :membership_ends_at, :membership_pause_at,
-            :OIB, :phone_number, :code, membership_type_ids: [], group_ids: []
+            :OIB, :phone_number, :code, :bonus_attendance ,membership_type_ids: [], group_ids: []
         )
       end
 

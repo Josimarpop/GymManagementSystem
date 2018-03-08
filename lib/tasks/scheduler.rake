@@ -9,3 +9,7 @@ end
 task :send_reminders => :environment do
   MembershipNoticeMailsenderJob.perform_later
 end
+
+task :send_birthday_notices => :environment do
+  UserBirthdayMailsenderJob.perform_later
+end

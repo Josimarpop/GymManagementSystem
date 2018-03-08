@@ -4,16 +4,18 @@ class NewBonusAttendanceService
     @user = user
   end
 
-  attr_accessor :user
-
   def perform
-    return add_bonus_attendance if user.bonus_attendance.blank?
+    (add_bonus_attendance and return added_bonus_attendance_notice) if user.bonus_attendance.blank?
     no_allowed_bonus_attendace_notice
   end
 
+  private
+
+  attr_accessor :user
+
   def add_bonus_attendance
-    user.update(bonus_attendance: Time.now)
-    added_bonus_attendance_notice
+    user.bonus_attendance =  Time.now
+    user.save
   end
 
   def added_bonus_attendance_notice

@@ -6,7 +6,7 @@ module Api
         user = User.find(bonus_attendances_params[:user_id])
         render json: NewBonusAttendanceService.new(user).perform
       end
-      
+
       private
 
       def bonus_attendances_params

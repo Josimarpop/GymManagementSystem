@@ -16,4 +16,5 @@ class MembershipMailer < ApplicationMailer
     @user = user
     mail(to: @user.email, subject: '3 dana do isteka članarine!', template_name: 'membership_expired_in_3days')
   end
+
 end

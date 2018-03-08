@@ -27,7 +27,11 @@ class NewAttendanceService
     return notice_about_expired_membership if user.status.include? 'inactive'
 
     return notice_about_hour_restriction unless user_hour_restriction_valid?
-    return notice_about_expired_attendances unless user_max_attendances_valid?
+    (set_user_inactive and return notice_about_expired_attendances) unless user_max_attendances_valid?
+  end
+
+  def set_user_inactive
+    user.update(status: 'inactive')
   end
 
   def extend_membership

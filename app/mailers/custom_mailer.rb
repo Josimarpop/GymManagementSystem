@@ -1,5 +1,6 @@
 class CustomMailer < ApplicationMailer
   default from: 'Sportski centar Arena NO REPLY <no_reply@sportskicentararena.com>'
+  default cc: 'scarena2016@gmail.com'
 
   def custom_mail(user, mail_params)
     @user    = user
